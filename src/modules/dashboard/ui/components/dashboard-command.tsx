@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { CommandDialog, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import { CommandResponsiveDialog, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 
 interface Profs {
     open: boolean;
@@ -8,7 +8,7 @@ interface Profs {
 
 export const DashboardCommand = ({ open, setOpen }: Profs) => {
    return (
-    <CommandDialog open={open} onOpenChange={setOpen}>
+    <CommandResponsiveDialog open={open} onOpenChange={setOpen}>
         <CommandInput
         placeholder="Find the meeting and agents"
         />
@@ -16,7 +16,10 @@ export const DashboardCommand = ({ open, setOpen }: Profs) => {
             <CommandItem>
                Test 
             </CommandItem>
+            <CommandItem>
+               Test2
+            </CommandItem>
         </CommandList>
-    </CommandDialog>
+    </CommandResponsiveDialog>
    )
 };
